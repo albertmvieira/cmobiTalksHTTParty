@@ -1,0 +1,59 @@
+{
+  "bank": [
+    {
+      "name": "ABN AMRO FUND MANAGERS LIMITED",
+      "code": "817",
+      "id": 1
+    }
+  ],
+  "agency": [
+    {
+      "bankId": 1,
+      "adress": "MacGyver Islands",
+      "number": "153",
+      "city": "West Dino",
+      "complement": "Apt. 402",
+      "phone": "373889286",
+      "id": 1
+    }
+  ],
+  "customer": [
+    {
+      "agencyId": 1,
+      "name": "Ranae Medhurst",
+      "occupation": "IT Analyst",
+      "adress": "Ryan Court",
+      "number": "1997",
+      "complement": "Apt. 734",
+      "phone": "944856212",
+      "email": "averysmith@ziemannbednar.name",
+      "id": 1
+    }
+  ],
+  "account": [
+    {
+      "customerId": 1,
+      "account_number": "5292300257",
+      "iban": "GB37YSEA84353218357161",
+      "card": "5137-3102-7799-5229",
+      "verification_code": "270",
+      "balance": 324.18,
+      "high_limit": 3241,
+      "low_limit": 26,
+      "id": 1
+    }
+  ],
+  "transaction": [
+    {
+      "accountId": 1,
+      "protocol": "B0002F40AY",
+      "status": "confirmed",
+      "transactionId": "5bb9b11b8ad4fdecc426e8aeb7fb770d9b8643af",
+      "type": "credit",
+      "routing_number": "305746577",
+      "value": 38.89,
+      "date": "20/08/2018 10:13",
+      "id": 1
+    }
+  ]
+}
