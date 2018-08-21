@@ -4,6 +4,7 @@ end
 
 Dada("a lista de Agencias cadastradas") do
     $get = @agencia.GETALL
+    expect($get.length).to be >=0
 end
 
 Quando("realizar uma requisição do tipo {string} em Clientes") do |tipo|
@@ -13,6 +14,8 @@ Quando("realizar uma requisição do tipo {string} em Clientes") do |tipo|
         $get = @cliente.GET($response['id'])
     elsif tipo == "PUT"
         $put = @cliente.PUT($response['id'])
+    else
+        expect(tipo).to include("POST", "GET", "PUT")
     end
 end
 
@@ -25,5 +28,7 @@ Então("a API deverá retornar os dados {string} de Clientes") do |mensagem|
     elsif mensagem == "da Alteração"
         expect($put.body).not_to eq($response.body)
         puts $put.body
+    else
+        expect(mensagem).to include("do Cadastro", "da Consulta", "da Alteração")
     end
 end

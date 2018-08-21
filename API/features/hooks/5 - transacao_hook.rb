@@ -2,7 +2,7 @@ Before '@transacao' do
     @conta = Conta.new(@body, @headers)
     $get = @conta.GETALL
     index = $get.length
-    @accountId = $get[Faker::Number.between(1,(index.to_i - 1))]['id']
+    @accountId = $get[Faker::Number.between(0,(index -1).to_i)]['id']
     d = DateTime.now
     @date = d.strftime("%d/%m/%Y %H:%M")
     @protocol = Faker::Code.asin

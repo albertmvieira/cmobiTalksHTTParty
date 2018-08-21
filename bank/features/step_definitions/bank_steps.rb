@@ -16,7 +16,7 @@ end
 
 Então("a mensagem {string}") do |string|
     puts "Mensagem: #{$response.message}"
-    expect($response.message).to eq("Created")
+    expect($response.message).to eq(string)
 end
 
 Quando("realizar uma requisição usando o método GET") do
@@ -51,7 +51,7 @@ end
   
 Então("a mensagem da alteração {string}") do |string|
     puts "Mensagem: #{$put.message}"
-    expect($put.message).to eq("OK")
+    expect($put.message).to eq(string)
 end
 
 Quando("realizar uma requisição utilizando o método DELETE") do
@@ -68,7 +68,7 @@ end
   
 Então("a mensagem da deleção {string}") do |string|
     puts "Mensagem: #{$del.message}"
-    expect($del.message).to eq("OK")
+    expect($del.message).to eq(string)
 end
 
 
@@ -78,11 +78,11 @@ end
   
 Então("a API deve retornar o código {int}") do |int|
     puts "Código: #{$get.code}"
-    expect($get.code).to eq(404)
+    expect($get.code).to eq(int)
 end
 
 Então("a mensagem de não encontrado {string}") do |string|
     puts "Mensagem: #{$get.message}"
-    expect($get.message).to eq("Not Found")
+    expect($get.message).to eq(string)
 end
   

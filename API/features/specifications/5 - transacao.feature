@@ -12,3 +12,11 @@ Cenário: Manter dados de Transações Bancárias
     Então a API deverá retornar os dados "da Transação" Bancária
     E exibir o código 201
     E a mensagem "Created"
+
+Cenário: Consultar dados de Transações Bancárias
+    Dada a rota da API para o manter dados de transações bancárias
+    E a lista de Contas bancárias cadastradas
+    Quando realizar uma requisição do tipo "GET" em transações
+    Então a API deverá retornar os dados "da Consulta" Bancária
+    E exibir o código 200
+    E a mensagem "OK"
