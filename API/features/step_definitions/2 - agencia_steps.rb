@@ -4,7 +4,7 @@ end
 
 Dada("a lista de Bancos cadastrados") do
     $getall = @banco.GETALL
-    expect($getall.length).to be >= 0
+    expect($getall.length).to be > 0
 end
 
 Quando("realizar uma requisição do tipo {string} em Agências") do |tipo|

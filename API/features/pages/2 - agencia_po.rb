@@ -1,6 +1,6 @@
 class Agencia
 	include HTTParty
-	base_uri "http://localhost:3000"
+	base_uri $env['base_uri']
 	#debug_output $stdout
 	def initialize(body, headers)
 		@options = {:body => body, :headers => headers}

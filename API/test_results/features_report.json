@@ -1,0 +1,1371 @@
+[
+  {
+    "uri": "features/specifications/1 - banco.feature",
+    "id": "manter-dados-de-registros-do-cadastro-de-bancos",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de registros do cadastro de Bancos",
+    "description": "    Como um cliente da API\n    Eu quero consumir as requisições do cadastro de Bancos\n    A fim de manipular os registros do cadastro",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@banco",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;manter-dados-de-um-novo-banco",
+        "keyword": "Cenário",
+        "name": "Manter dados de um novo Banco",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@banco",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/1 - banco_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 375747276
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados do Banco",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55457
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:5"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:10:in `POST'\n./features/step_definitions/1 - banco_steps.rb:7:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:10:in `Quando realizar uma requisição do tipo \"POST\"'",
+              "duration": 757521
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;consultar-dados-de-um-novo-banco",
+        "keyword": "Cenário",
+        "name": "Consultar dados de um novo Banco",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@banco",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/1 - banco_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100558
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados do Banco",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21918
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"GET\"",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:5"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/1 - banco_steps.rb:9:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:17:in `Quando realizar uma requisição do tipo \"GET\"'",
+              "duration": 173992
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Consulta\"",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;alterar-dados-de-um-novo-banco",
+        "keyword": "Cenário",
+        "name": "Alterar dados de um novo Banco",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@banco",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/1 - banco_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93294
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados do Banco",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18756
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"PUT\"",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:5"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/1 - banco_steps.rb:11:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:24:in `Quando realizar uma requisição do tipo \"PUT\"'",
+              "duration": 144934
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Alteração\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specifications/2 - angecia.feature",
+    "id": "manter-dados-de-registros-do-cadastro-de-agências",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de registros do cadastro de Agências",
+    "description": "    Como um cliente da API\n    Eu quero consumir as requisições do cadastro de Agências\n    A fim de manipular os registros do cadastro",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@agencia",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;manter-dados-de-uma-nova-agência",
+        "keyword": "Cenário",
+        "name": "Manter dados de uma nova Agência",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@agencia",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/2 - agencia_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
+              "duration": 494923
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Agência",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Bancos cadastrados",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Agências",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" da Agência",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;consultar-dados-de-uma-nova-agência-pelo-id",
+        "keyword": "Cenário",
+        "name": "Consultar dados de uma nova Agência pelo ID",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@agencia",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/2 - agencia_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
+              "duration": 486257
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Agência",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Bancos cadastrados",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"GET\" em Agências",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Consulta\" da Agência",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;alterar-dados-de-uma-nova-agência-pelo-id",
+        "keyword": "Cenário",
+        "name": "Alterar dados de uma nova Agência pelo ID",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@agencia",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/2 - agencia_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
+              "duration": 388754
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Agência",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Bancos cadastrados",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"PUT\" em Agências",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Alteração\" da Agência",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specifications/3 - cliente.feature",
+    "id": "manter-dados-de-registros-do-cadastro-de-clientes",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de registros do cadastro de Clientes",
+    "description": "    Como um cliente da API\n    Eu quero consumir as requisições do cadastro de Clientes\n    A fim de manipular os registros do cadastro",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@cliente",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;manter-dados-de-uma-novo-cliente",
+        "keyword": "Cenário",
+        "name": "Manter dados de uma novo Cliente",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cliente",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/3 - cliente_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
+              "duration": 582557
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Cliente",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Agencias cadastradas",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Clientes",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" de Clientes",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;consultar-dados-de-uma-novo-cliente",
+        "keyword": "Cenário",
+        "name": "Consultar dados de uma novo Cliente",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cliente",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/3 - cliente_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
+              "duration": 553642
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Cliente",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Agencias cadastradas",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"GET\" em Clientes",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Consulta\" de Clientes",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;alterar-dados-de-uma-novo-cliente",
+        "keyword": "Cenário",
+        "name": "Alterar dados de uma novo Cliente",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cliente",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/3 - cliente_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
+              "duration": 678340
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Cliente",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Agencias cadastradas",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"PUT\" em Clientes",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Alteração\" de Clientes",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specifications/4 - conta.feature",
+    "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de registros do cadastro de Conta Bancária",
+    "description": "    Como um cliente da API\n    Eu quero consumir as requisições do cadastro de Conta Bancária\n    A fim de manipular os registros do cadastro",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@conta",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;manter-dados-de-uma-nova-conta-bancária",
+        "keyword": "Cenário",
+        "name": "Manter dados de uma nova Conta Bancária",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@conta",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/4 - conta_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
+              "duration": 435979
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Conta Bancária",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Clientes cadastrados",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Conta Bancária",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" da Conta Bancária",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;consultar-dados-de-uma-nova-conta-bancária",
+        "keyword": "Cenário",
+        "name": "Consultar dados de uma nova Conta Bancária",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@conta",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/4 - conta_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
+              "duration": 510485
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Conta Bancária",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Clientes cadastrados",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"GET\" em Conta Bancária",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Consulta\" da Conta Bancária",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;alterar-dados-de-uma-nova-conta-bancária",
+        "keyword": "Cenário",
+        "name": "Alterar dados de uma nova Conta Bancária",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@conta",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/4 - conta_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
+              "duration": 439906
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados da Conta Bancária",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Clientes cadastrados",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"PUT\" em Conta Bancária",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Alteração\" da Conta Bancária",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:22"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/specifications/5 - transacao.feature",
+    "id": "manter-dados-de-registros-de-transação-bancária",
+    "keyword": "Funcionalidade",
+    "name": "Manter dados de registros de Transação Bancária",
+    "description": "    Como um cliente da API\n    Eu quero consumir as requisições de Transação Bancária\n    A fim de manipular os registros das transações",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@transacao",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "manter-dados-de-registros-de-transação-bancária;manter-dados-de-transações-bancárias",
+        "keyword": "Cenário",
+        "name": "Manter dados de Transações Bancárias",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@transacao",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/5 - transacao_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/4 - conta_po.rb:18:in `GETALL'\n./features/hooks/5 - transacao_hook.rb:3:in `Before'",
+              "duration": 918363
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados de transações bancárias",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Contas bancárias cadastradas",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em transações",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Transação\" Bancária",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:20"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-de-transação-bancária;consultar-dados-de-transações-bancárias",
+        "keyword": "Cenário",
+        "name": "Consultar dados de Transações Bancárias",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@transacao",
+            "line": 2
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/5 - transacao_hook.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/4 - conta_po.rb:18:in `GETALL'\n./features/hooks/5 - transacao_hook.rb:3:in `Before'",
+              "duration": 484379
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados de transações bancárias",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:1"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Contas bancárias cadastradas",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"GET\" em transações",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:10"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Consulta\" Bancária",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:20"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 200",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"OK\"",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
