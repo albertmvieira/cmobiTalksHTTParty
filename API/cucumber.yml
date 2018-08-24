@@ -1,7 +1,8 @@
 ---
-default: -p relatorio -p json -p qa
+default: -p relatorio -p json -p qa -p no_source
 relatorio: --format pretty --format html --out=test_results/features_report.html
 json: --format progress --format json --out=test_results/features_report.json
+no_source: --no-source
 qa: ENV=qa
 dev: ENV=dev
 prod: ENV=prod

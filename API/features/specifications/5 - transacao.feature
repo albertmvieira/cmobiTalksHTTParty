@@ -5,18 +5,17 @@ Funcionalidade: Manter dados de registros de Transação Bancária
     Eu quero consumir as requisições de Transação Bancária
     A fim de manipular os registros das transações
 
-Cenário: Manter dados de Transações Bancárias
+Contexto: Rota da API
     Dada a rota da API para o manter dados de transações bancárias
     E a lista de Contas bancárias cadastradas
-    Quando realizar uma requisição do tipo "POST" em transações
-    Então a API deverá retornar os dados "da Transação" Bancária
-    E exibir o código 201
-    E a mensagem "Created"
 
-Cenário: Consultar dados de Transações Bancárias
-    Dada a rota da API para o manter dados de transações bancárias
-    E a lista de Contas bancárias cadastradas
-    Quando realizar uma requisição do tipo "GET" em transações
-    Então a API deverá retornar os dados "da Consulta" Bancária
-    E exibir o código 200
-    E a mensagem "OK"
+Esquema do Cenário: Manter dados de Transações Bancárias
+    Quando realizar uma requisição do tipo <tipo> em transações
+    Então a API deverá retornar os dados <retorno> Bancária
+    E exibir o código <codigo>
+    E a mensagem <mensagem>
+
+    Exemplos:
+    | tipo   | retorno        | codigo | mensagem  |
+    | "POST" | "da Transação"  | 201    | "Created" |
+    | "GET"  | "da Consulta"  | 200    | "OK"      |

@@ -14,18 +14,11 @@
     ],
     "elements": [
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-bancos;manter-dados-de-um-novo-banco",
-        "keyword": "Cenário",
-        "name": "Manter dados de um novo Banco",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
         "line": 8,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@banco",
-            "line": 2
-          }
-        ],
+        "type": "background",
         "before": [
           {
             "match": {
@@ -33,7 +26,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 375747276
+              "duration": 378445549
             }
           }
         ],
@@ -47,63 +40,17 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55457
-            }
-          },
-          {
-            "keyword": "Quando ",
-            "name": "realizar uma requisição do tipo \"POST\"",
-            "line": 10,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:5"
-            },
-            "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:10:in `POST'\n./features/step_definitions/1 - banco_steps.rb:7:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:10:in `Quando realizar uma requisição do tipo \"POST\"'",
-              "duration": 757521
-            }
-          },
-          {
-            "keyword": "Então ",
-            "name": "a API deverá retornar os dados \"do Cadastro\"",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:17"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "exibir o código 201",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:31"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a mensagem \"Created\"",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:43"
-            },
-            "result": {
-              "status": "skipped"
+              "duration": 27550
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-bancos;consultar-dados-de-um-novo-banco",
-        "keyword": "Cenário",
-        "name": "Consultar dados de um novo Banco",
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;manter-dados-de-um-novo-banco;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de um novo Banco",
         "description": "",
-        "line": 15,
+        "line": 19,
         "type": "scenario",
         "tags": [
           {
@@ -111,6 +58,72 @@
             "line": 2
           }
         ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\"",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4472937
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\"",
+            "line": 19,
+            "output": [
+              "{\n  \"name\": \"ABBEY LIFE\",\n  \"code\": 237,\n  \"id\": 5\n}"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65762
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 19,
+            "output": [
+              "201"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 473192
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 19,
+            "output": [
+              "Created"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149276
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Rota da API",
+        "description": "",
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
@@ -118,7 +131,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 100558
+              "duration": 103713
             }
           }
         ],
@@ -126,76 +139,96 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados do Banco",
-            "line": 16,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 21918
+              "duration": 24842
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;manter-dados-de-um-novo-banco;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de um novo Banco",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@banco",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"GET\"",
-            "line": 17,
+            "line": 20,
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:5"
             },
             "result": {
-              "status": "failed",
-              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/1 - banco_steps.rb:9:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:17:in `Quando realizar uma requisição do tipo \"GET\"'",
-              "duration": 173992
+              "status": "passed",
+              "duration": 4073519
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Consulta\"",
-            "line": 18,
+            "line": 20,
+            "output": [
+              "{\n  \"name\": \"ABBEY LIFE\",\n  \"code\": 237,\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:17"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 144315
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
-            "line": 19,
+            "line": 20,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 42550
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
             "line": 20,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 81422
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-bancos;alterar-dados-de-um-novo-banco",
-        "keyword": "Cenário",
-        "name": "Alterar dados de um novo Banco",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
-        "line": 22,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@banco",
-            "line": 2
-          }
-        ],
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
@@ -203,7 +236,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93294
+              "duration": 106623
             }
           }
         ],
@@ -211,59 +244,86 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados do Banco",
-            "line": 23,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 18756
+              "duration": 15713
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-bancos;manter-dados-de-um-novo-banco;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de um novo Banco",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@banco",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"PUT\"",
-            "line": 24,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:5"
             },
             "result": {
-              "status": "failed",
-              "error_message": "undefined method `[]' for nil:NilClass (NoMethodError)\n./features/step_definitions/1 - banco_steps.rb:11:in `\"realizar uma requisição do tipo {string}\"'\nfeatures/specifications/1 - banco.feature:24:in `Quando realizar uma requisição do tipo \"PUT\"'",
-              "duration": 144934
+              "status": "passed",
+              "duration": 4029969
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Alteração\"",
-            "line": 25,
+            "line": 21,
+            "output": [
+              "{\n  \"name\": \"ALLIED BANK PHILIPPINES (UK) PLC\",\n  \"code\": 807,\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:17"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 134876
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
-            "line": 26,
+            "line": 21,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 39639
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 27,
+            "line": 21,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 30026
             }
           }
         ]
@@ -285,40 +345,33 @@
     ],
     "elements": [
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-agências;manter-dados-de-uma-nova-agência",
-        "keyword": "Cenário",
-        "name": "Manter dados de uma nova Agência",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
         "line": 8,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@agencia",
-            "line": 2
-          }
-        ],
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/2 - agencia_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
-              "duration": 494923
+              "status": "passed",
+              "duration": 5867916
             }
           }
         ],
         "steps": [
           {
             "keyword": "Dada ",
-            "name": "a rota da API para o manter dados da Agência",
+            "name": "a rota da API para o manter dados do Banco",
             "line": 9,
             "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:1"
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 22735
             }
           },
           {
@@ -329,61 +382,18 @@
               "location": "features/step_definitions/2 - agencia_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Quando ",
-            "name": "realizar uma requisição do tipo \"POST\" em Agências",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:10"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Então ",
-            "name": "a API deverá retornar os dados \"do Cadastro\" da Agência",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:22"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "exibir o código 201",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:31"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a mensagem \"Created\"",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:43"
-            },
-            "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 5227332
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-agências;consultar-dados-de-uma-nova-agência-pelo-id",
-        "keyword": "Cenário",
-        "name": "Consultar dados de uma nova Agência pelo ID",
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;manter-dados-de-uma-nova-agência;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Agência",
         "description": "",
-        "line": 16,
+        "line": 20,
         "type": "scenario",
         "tags": [
           {
@@ -391,93 +401,233 @@
             "line": 2
           }
         ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Agências",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4315089
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" da Agência",
+            "line": 20,
+            "output": [
+              "{\n  \"bankId\": 5,\n  \"adress\": \"Brett Mall\",\n  \"number\": \"1514\",\n  \"city\": \"Port Darnell\",\n  \"complement\": \"Apt. 319\",\n  \"phone\": \"320129386\",\n  \"id\": 5\n}"
+            ],
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55004
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 20,
+            "output": [
+              "201"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89726
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 20,
+            "output": [
+              "Created"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95380
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Rota da API",
+        "description": "",
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/2 - agencia_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
-              "duration": 486257
+              "status": "passed",
+              "duration": 5083037
             }
           }
         ],
         "steps": [
           {
             "keyword": "Dada ",
-            "name": "a rota da API para o manter dados da Agência",
-            "line": 17,
+            "name": "a rota da API para o manter dados do Banco",
+            "line": 9,
             "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:1"
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 41816
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Bancos cadastrados",
-            "line": 18,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/2 - agencia_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3756968
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;manter-dados-de-uma-nova-agência;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Agência",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@agencia",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"GET\" em Agências",
-            "line": 19,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/2 - agencia_steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 5161394
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Consulta\" da Agência",
-            "line": 20,
+            "line": 21,
+            "output": [
+              "{\n  \"bankId\": 5,\n  \"adress\": \"Brett Mall\",\n  \"number\": \"1514\",\n  \"city\": \"Port Darnell\",\n  \"complement\": \"Apt. 319\",\n  \"phone\": \"320129386\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/2 - agencia_steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 156179
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
             "line": 21,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 47493
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 22,
+            "line": 21,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 168692
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-agências;alterar-dados-de-uma-nova-agência-pelo-id",
-        "keyword": "Cenário",
-        "name": "Alterar dados de uma nova Agência pelo ID",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
-        "line": 24,
+        "line": 8,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/hooks/2 - agencia_hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4616603
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dada ",
+            "name": "a rota da API para o manter dados do Banco",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41984
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de Bancos cadastrados",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/2 - agencia_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5648667
+            }
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-agências;manter-dados-de-uma-nova-agência;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Agência",
+        "description": "",
+        "line": 22,
         "type": "scenario",
         "tags": [
           {
@@ -485,83 +635,62 @@
             "line": 2
           }
         ],
-        "before": [
-          {
-            "match": {
-              "location": "features/hooks/2 - agencia_hook.rb:1"
-            },
-            "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/1 - banco_po.rb:18:in `GETALL'\n./features/hooks/2 - agencia_hook.rb:3:in `Before'",
-              "duration": 388754
-            }
-          }
-        ],
         "steps": [
-          {
-            "keyword": "Dada ",
-            "name": "a rota da API para o manter dados da Agência",
-            "line": 25,
-            "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:1"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a lista de Bancos cadastrados",
-            "line": 26,
-            "match": {
-              "location": "features/step_definitions/2 - agencia_steps.rb:5"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"PUT\" em Agências",
-            "line": 27,
+            "line": 22,
             "match": {
               "location": "features/step_definitions/2 - agencia_steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4070057
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Alteração\" da Agência",
-            "line": 28,
+            "line": 22,
+            "output": [
+              "{\n  \"bankId\": 5,\n  \"adress\": \"Dare Lodge\",\n  \"number\": \"77519\",\n  \"city\": \"Lake Yongbury\",\n  \"complement\": \"Suite 110\",\n  \"phone\": \"783543306\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/2 - agencia_steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 76731
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
-            "line": 29,
+            "line": 22,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 43693
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 30,
+            "line": 22,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 30835
             }
           }
         ]
@@ -583,27 +712,19 @@
     ],
     "elements": [
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-clientes;manter-dados-de-uma-novo-cliente",
-        "keyword": "Cenário",
-        "name": "Manter dados de uma novo Cliente",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
         "line": 8,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@cliente",
-            "line": 2
-          }
-        ],
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/3 - cliente_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
-              "duration": 582557
+              "status": "passed",
+              "duration": 5357050
             }
           }
         ],
@@ -616,7 +737,8 @@
               "location": "features/step_definitions/3 - cliente_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 42573
             }
           },
           {
@@ -627,61 +749,18 @@
               "location": "features/step_definitions/3 - cliente_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Quando ",
-            "name": "realizar uma requisição do tipo \"POST\" em Clientes",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/3 - cliente_steps.rb:10"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Então ",
-            "name": "a API deverá retornar os dados \"do Cadastro\" de Clientes",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/3 - cliente_steps.rb:22"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "exibir o código 201",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:31"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a mensagem \"Created\"",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:43"
-            },
-            "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4626494
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-clientes;consultar-dados-de-uma-novo-cliente",
-        "keyword": "Cenário",
-        "name": "Consultar dados de uma novo Cliente",
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;manter-dados-de-uma-novo-cliente;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma novo Cliente",
         "description": "",
-        "line": 16,
+        "line": 20,
         "type": "scenario",
         "tags": [
           {
@@ -689,15 +768,80 @@
             "line": 2
           }
         ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Clientes",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5134780
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" de Clientes",
+            "line": 20,
+            "output": [
+              "{\n  \"agencyId\": 1,\n  \"name\": \"Francis Kuhn\",\n  \"occupation\": \"Senior Architect\",\n  \"adress\": \"Maryalice Glens\",\n  \"number\": \"754\",\n  \"complement\": \"Suite 104\",\n  \"phone\": \"893586641\",\n  \"email\": \"dante@hickle.info\",\n  \"id\": 5\n}"
+            ],
+            "match": {
+              "location": "features/step_definitions/3 - cliente_steps.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47669
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 20,
+            "output": [
+              "201"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57705
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 20,
+            "output": [
+              "Created"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106200
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Rota da API",
+        "description": "",
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/3 - cliente_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
-              "duration": 553642
+              "status": "passed",
+              "duration": 5769514
             }
           }
         ],
@@ -705,93 +849,116 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados da Cliente",
-            "line": 17,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 39244
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Agencias cadastradas",
-            "line": 18,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4315316
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;manter-dados-de-uma-novo-cliente;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma novo Cliente",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cliente",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"GET\" em Clientes",
-            "line": 19,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3615646
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Consulta\" de Clientes",
-            "line": 20,
+            "line": 21,
+            "output": [
+              "{\n  \"agencyId\": 1,\n  \"name\": \"Francis Kuhn\",\n  \"occupation\": \"Senior Architect\",\n  \"adress\": \"Maryalice Glens\",\n  \"number\": \"754\",\n  \"complement\": \"Suite 104\",\n  \"phone\": \"893586641\",\n  \"email\": \"dante@hickle.info\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 75044
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
             "line": 21,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 29466
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 22,
+            "line": 21,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 82016
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-clientes;alterar-dados-de-uma-novo-cliente",
-        "keyword": "Cenário",
-        "name": "Alterar dados de uma novo Cliente",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
-        "line": 24,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@cliente",
-            "line": 2
-          }
-        ],
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/3 - cliente_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/2 - agencia_po.rb:18:in `GETALL'\n./features/hooks/3 - cliente_hook.rb:3:in `Before'",
-              "duration": 678340
+              "status": "passed",
+              "duration": 6795040
             }
           }
         ],
@@ -799,67 +966,98 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados da Cliente",
-            "line": 25,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 21863
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Agencias cadastradas",
-            "line": 26,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3662905
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-clientes;manter-dados-de-uma-novo-cliente;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma novo Cliente",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cliente",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"PUT\" em Clientes",
-            "line": 27,
+            "line": 22,
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 3742070
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Alteração\" de Clientes",
-            "line": 28,
+            "line": 22,
+            "output": [
+              "{\n  \"agencyId\": 4,\n  \"name\": \"Misha Schaden\",\n  \"occupation\": \"Real-Estate Administrator\",\n  \"adress\": \"O'Hara Underpass\",\n  \"number\": \"651\",\n  \"complement\": \"Suite 437\",\n  \"phone\": \"365027324\",\n  \"email\": \"erich@mcglynn.io\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/3 - cliente_steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 86836
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
-            "line": 29,
+            "line": 22,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 40143
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 30,
+            "line": 22,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 50077
             }
           }
         ]
@@ -881,27 +1079,19 @@
     ],
     "elements": [
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;manter-dados-de-uma-nova-conta-bancária",
-        "keyword": "Cenário",
-        "name": "Manter dados de uma nova Conta Bancária",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
         "line": 8,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@conta",
-            "line": 2
-          }
-        ],
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/4 - conta_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
-              "duration": 435979
+              "status": "passed",
+              "duration": 5373651
             }
           }
         ],
@@ -914,7 +1104,8 @@
               "location": "features/step_definitions/4 - conta._steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 23409
             }
           },
           {
@@ -925,61 +1116,18 @@
               "location": "features/step_definitions/4 - conta._steps.rb:5"
             },
             "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Quando ",
-            "name": "realizar uma requisição do tipo \"POST\" em Conta Bancária",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/4 - conta._steps.rb:10"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Então ",
-            "name": "a API deverá retornar os dados \"do Cadastro\" da Conta Bancária",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/4 - conta._steps.rb:22"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "exibir o código 201",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:31"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a mensagem \"Created\"",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:43"
-            },
-            "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4504852
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;consultar-dados-de-uma-nova-conta-bancária",
-        "keyword": "Cenário",
-        "name": "Consultar dados de uma nova Conta Bancária",
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;manter-dados-de-uma-nova-conta-bancária;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Conta Bancária",
         "description": "",
-        "line": 16,
+        "line": 20,
         "type": "scenario",
         "tags": [
           {
@@ -987,15 +1135,80 @@
             "line": 2
           }
         ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em Conta Bancária",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6432119
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"do Cadastro\" da Conta Bancária",
+            "line": 20,
+            "output": [
+              "{\n  \"customerId\": 3,\n  \"account_number\": 2082576042,\n  \"iban\": \"GB75FGXJ65393596417277\",\n  \"card\": \"6771-8977-3487-5076\",\n  \"verification_code\": \"257\",\n  \"balance\": 471.02,\n  \"high_limit\": 4713,\n  \"low_limit\": 38,\n  \"status\": \"active\",\n  \"created\": \"24/08/2018 15:32\",\n  \"id\": 5\n}"
+            ],
+            "match": {
+              "location": "features/step_definitions/4 - conta._steps.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56836
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 20,
+            "output": [
+              "201"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44847
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 20,
+            "output": [
+              "Created"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106910
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Rota da API",
+        "description": "",
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/4 - conta_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
-              "duration": 510485
+              "status": "passed",
+              "duration": 4700612
             }
           }
         ],
@@ -1003,93 +1216,116 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados da Conta Bancária",
-            "line": 17,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 20694
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Clientes cadastrados",
-            "line": 18,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4844099
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;manter-dados-de-uma-nova-conta-bancária;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Conta Bancária",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@conta",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"GET\" em Conta Bancária",
-            "line": 19,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4866676
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Consulta\" da Conta Bancária",
-            "line": 20,
+            "line": 21,
+            "output": [
+              "{\n  \"customerId\": 3,\n  \"account_number\": 2082576042,\n  \"iban\": \"GB75FGXJ65393596417277\",\n  \"card\": \"6771-8977-3487-5076\",\n  \"verification_code\": \"257\",\n  \"balance\": 471.02,\n  \"high_limit\": 4713,\n  \"low_limit\": 38,\n  \"status\": \"active\",\n  \"created\": \"24/08/2018 15:32\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 84164
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
             "line": 21,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 69870
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 22,
+            "line": 21,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 234524
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;alterar-dados-de-uma-nova-conta-bancária",
-        "keyword": "Cenário",
-        "name": "Alterar dados de uma nova Conta Bancária",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
-        "line": 24,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@conta",
-            "line": 2
-          }
-        ],
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/4 - conta_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/3 - cliente_po.rb:18:in `GETALL'\n./features/hooks/4 - conta_hook.rb:3:in `Before'",
-              "duration": 439906
+              "status": "passed",
+              "duration": 5985467
             }
           }
         ],
@@ -1097,67 +1333,98 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados da Conta Bancária",
-            "line": 25,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 24979
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Clientes cadastrados",
-            "line": 26,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4171777
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-do-cadastro-de-conta-bancária;manter-dados-de-uma-nova-conta-bancária;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de uma nova Conta Bancária",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@conta",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"PUT\" em Conta Bancária",
-            "line": 27,
+            "line": 22,
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4890369
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Alteração\" da Conta Bancária",
-            "line": 28,
+            "line": 22,
+            "output": [
+              "{\n  \"customerId\": 4,\n  \"account_number\": 7756784403,\n  \"iban\": \"GB19DWHT85082109695593\",\n  \"card\": \"6771-8960-8206-6650\",\n  \"verification_code\": \"146\",\n  \"balance\": 228.09,\n  \"high_limit\": 2282,\n  \"low_limit\": 22,\n  \"status\": \"active\",\n  \"created\": \"24/08/2018 15:32\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/4 - conta._steps.rb:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 70130
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
-            "line": 29,
+            "line": 22,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 32781
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 30,
+            "line": 22,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 45966
             }
           }
         ]
@@ -1179,27 +1446,19 @@
     ],
     "elements": [
       {
-        "id": "manter-dados-de-registros-de-transação-bancária;manter-dados-de-transações-bancárias",
-        "keyword": "Cenário",
-        "name": "Manter dados de Transações Bancárias",
+        "keyword": "Contexto",
+        "name": "Rota da API",
         "description": "",
         "line": 8,
-        "type": "scenario",
-        "tags": [
-          {
-            "name": "@transacao",
-            "line": 2
-          }
-        ],
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/5 - transacao_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/4 - conta_po.rb:18:in `GETALL'\n./features/hooks/5 - transacao_hook.rb:3:in `Before'",
-              "duration": 918363
+              "status": "passed",
+              "duration": 8393465
             }
           }
         ],
@@ -1212,7 +1471,8 @@
               "location": "features/step_definitions/5 - transacao_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 25573
             }
           },
           {
@@ -1223,61 +1483,18 @@
               "location": "features/step_definitions/5 - transacao_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Quando ",
-            "name": "realizar uma requisição do tipo \"POST\" em transações",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/5 - transacao_steps.rb:10"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "Então ",
-            "name": "a API deverá retornar os dados \"da Transação\" Bancária",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/5 - transacao_steps.rb:20"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "exibir o código 201",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:31"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "keyword": "E ",
-            "name": "a mensagem \"Created\"",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/1 - banco_steps.rb:43"
-            },
-            "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 5105423
             }
           }
         ]
       },
       {
-        "id": "manter-dados-de-registros-de-transação-bancária;consultar-dados-de-transações-bancárias",
-        "keyword": "Cenário",
-        "name": "Consultar dados de Transações Bancárias",
+        "id": "manter-dados-de-registros-de-transação-bancária;manter-dados-de-transações-bancárias;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de Transações Bancárias",
         "description": "",
-        "line": 16,
+        "line": 20,
         "type": "scenario",
         "tags": [
           {
@@ -1285,15 +1502,80 @@
             "line": 2
           }
         ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizar uma requisição do tipo \"POST\" em transações",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4445093
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a API deverá retornar os dados \"da Transação\" Bancária",
+            "line": 20,
+            "output": [
+              "{\n  \"accountId\": 2,\n  \"protocol\": \"B0002XTOHK\",\n  \"status\": \"confirmed\",\n  \"transactionId\": \"de1ace107e0e5735f74ba7f40fc94ddef871f672\",\n  \"type\": \"credit\",\n  \"routing_number\": \"021622496\",\n  \"value\": 68.07,\n  \"date\": \"24/08/2018 15:32\",\n  \"id\": 5\n}"
+            ],
+            "match": {
+              "location": "features/step_definitions/5 - transacao_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105249
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "exibir o código 201",
+            "line": 20,
+            "output": [
+              "201"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97816
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a mensagem \"Created\"",
+            "line": 20,
+            "output": [
+              "Created"
+            ],
+            "match": {
+              "location": "features/step_definitions/1 - banco_steps.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218953
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Rota da API",
+        "description": "",
+        "line": 8,
+        "type": "background",
         "before": [
           {
             "match": {
               "location": "features/hooks/5 - transacao_hook.rb:1"
             },
             "result": {
-              "status": "failed",
-              "error_message": "Failed to open TCP connection to localhost:4000 (Connection refused - connect(2) for \"localhost\" port 4000) (Errno::ECONNREFUSED)\n./features/pages/4 - conta_po.rb:18:in `GETALL'\n./features/hooks/5 - transacao_hook.rb:3:in `Before'",
-              "duration": 484379
+              "status": "passed",
+              "duration": 7273499
             }
           }
         ],
@@ -1301,67 +1583,98 @@
           {
             "keyword": "Dada ",
             "name": "a rota da API para o manter dados de transações bancárias",
-            "line": 17,
+            "line": 9,
             "match": {
               "location": "features/step_definitions/5 - transacao_steps.rb:1"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 23773
             }
           },
           {
             "keyword": "E ",
             "name": "a lista de Contas bancárias cadastradas",
-            "line": 18,
+            "line": 10,
             "match": {
               "location": "features/step_definitions/5 - transacao_steps.rb:5"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 6160051
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "manter-dados-de-registros-de-transação-bancária;manter-dados-de-transações-bancárias;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Manter dados de Transações Bancárias",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@transacao",
+            "line": 2
+          }
+        ],
+        "steps": [
           {
             "keyword": "Quando ",
             "name": "realizar uma requisição do tipo \"GET\" em transações",
-            "line": 19,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/5 - transacao_steps.rb:10"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4742525
             }
           },
           {
             "keyword": "Então ",
             "name": "a API deverá retornar os dados \"da Consulta\" Bancária",
-            "line": 20,
+            "line": 21,
+            "output": [
+              "{\n  \"accountId\": 2,\n  \"protocol\": \"B0002XTOHK\",\n  \"status\": \"confirmed\",\n  \"transactionId\": \"de1ace107e0e5735f74ba7f40fc94ddef871f672\",\n  \"type\": \"credit\",\n  \"routing_number\": \"021622496\",\n  \"value\": 68.07,\n  \"date\": \"24/08/2018 15:32\",\n  \"id\": 5\n}"
+            ],
             "match": {
               "location": "features/step_definitions/5 - transacao_steps.rb:20"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 117106
             }
           },
           {
             "keyword": "E ",
             "name": "exibir o código 200",
             "line": 21,
+            "output": [
+              "200"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:31"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 90910
             }
           },
           {
             "keyword": "E ",
             "name": "a mensagem \"OK\"",
-            "line": 22,
+            "line": 21,
+            "output": [
+              "OK"
+            ],
             "match": {
               "location": "features/step_definitions/1 - banco_steps.rb:43"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 157082
             }
           }
         ]
