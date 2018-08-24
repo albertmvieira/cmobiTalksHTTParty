@@ -58,12 +58,10 @@ Quando("realizar uma requisição utilizando o método DELETE") do
    $del = @bank.deleteBank($response['id'])
 end
   
-Então("a API retorna os dados da Deleção do Banco respondendo o código {int}") do |int|
+Então("a API retorna os dados da Deleção vazio do Banco respondendo o código {int}") do |int|
     puts "Código :#{$del.code}"
+    puts $del.body
     expect($del.code).to eq(int)
-    puts "ID     :#{$del['id']}"
-    puts "Código :#{$del['code']}"
-    puts "Nome   :#{$del['name']}"
 end
   
 Então("a mensagem da deleção {string}") do |string|

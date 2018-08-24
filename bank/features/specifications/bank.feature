@@ -26,7 +26,7 @@ Cenário: Alterar Banco pelo ID
 Cenário: Deletar Banco pelo ID
     Dado a rota da API para manter o cadastro de Banco
     Quando realizar uma requisição utilizando o método DELETE
-    Então a API retorna os dados da Deleção do Banco respondendo o código 200
+    Então a API retorna os dados da Deleção vazio do Banco respondendo o código 200
     E a mensagem da deleção "OK"
     E caso consultar o Banco pelo ID
     Então a API deve retornar o código 404
