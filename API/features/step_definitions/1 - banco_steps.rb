@@ -16,6 +16,7 @@ end
 
 Então("a API deverá retornar os dados {string}") do |metodo|
     if metodo == "do Cadastro"
+        expect(JSON.parse($response.body)).to include('id','name','code')
         puts $response.body
     elsif metodo == "da Consulta"
         expect($get.body).to eq($response.body)

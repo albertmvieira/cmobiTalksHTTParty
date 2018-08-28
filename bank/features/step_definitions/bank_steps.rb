@@ -7,16 +7,17 @@ Quando("realizar uma requisição usando o método POST") do
 end
 
 Então("a API irá retornar os dados do cadastro do Banco respondendo o código {int}") do |int|
-    puts "Código :#{$response.code}"
     expect($response.code).to eq(int)
+    expect(JSON.parse($response.body)).to include('id','code','name')
+    puts "Código :#{$response.code}"
     puts "ID     :#{$response['id']}"
     puts "Código :#{$response['code']}"
     puts "Nome   :#{$response['name']}"
 end 
 
 Então("a mensagem {string}") do |string|
-    puts "Mensagem: #{$response.message}"
     expect($response.message).to eq(string)
+    puts "Mensagem: #{$response.message}"
 end
 
 Quando("realizar uma requisição usando o método GET") do
@@ -24,8 +25,8 @@ Quando("realizar uma requisição usando o método GET") do
 end
   
 Então("a API irá retornar os dados da pesquisa do Banco respondendo o código {int}") do |int|
-    puts "Código :#{$get.code}"
     expect($get.code).to eq(int)
+    puts "Código :#{$get.code}"
     puts "ID     :#{$get['id']}"
     puts "Código :#{$get['code']}"
     puts "Nome   :#{$get['name']}"
@@ -33,8 +34,8 @@ Então("a API irá retornar os dados da pesquisa do Banco respondendo o código 
 end
   
 Então("a mensagem de sucesso {string}") do |string|
-    puts "Mensagem: #{$get.message}"
-    expect($get.message).to eq("OK")
+    expect($get.message).to eq(string)
+    puts "Mensagem: #{$get.message}"  
 end
 
 Quando("realizar uma requisição utilizando o método PUT") do
@@ -42,16 +43,17 @@ Quando("realizar uma requisição utilizando o método PUT") do
 end
   
 Então("a API irá retornar os dados da Alteração do Banco respondendo o código {int}") do |int|
-    puts "Código :#{$put.code}"
+    expect($put.body).to_not eq($response.body)
     expect($put.code).to eq(int)
+    puts "Código :#{$put.code}"
     puts "ID     :#{$put['id']}"
     puts "Código :#{$put['code']}"
-    puts "Nome   :#{$put['name']}"
+    puts "Nome   :#{$put['name']}"  
 end
   
 Então("a mensagem da alteração {string}") do |string|
-    puts "Mensagem: #{$put.message}"
     expect($put.message).to eq(string)
+    puts "Mensagem: #{$put.message}"
 end
 
 Quando("realizar uma requisição utilizando o método DELETE") do
@@ -59,14 +61,14 @@ Quando("realizar uma requisição utilizando o método DELETE") do
 end
   
 Então("a API retorna os dados da Deleção vazio do Banco respondendo o código {int}") do |int|
+    expect($del.code).to eq(int)
     puts "Código :#{$del.code}"
     puts $del.body
-    expect($del.code).to eq(int)
 end
   
 Então("a mensagem da deleção {string}") do |string|
-    puts "Mensagem: #{$del.message}"
     expect($del.message).to eq(string)
+    puts "Mensagem: #{$del.message}"
 end
 
 
