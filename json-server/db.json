@@ -59,6 +59,11 @@
       "name": "AAC CAPITAL PARTNERS LIMITED",
       "code": 11,
       "id": 12
+    },
+    {
+      "name": "ABC INTERNATIONAL BANK PLC",
+      "code": 694,
+      "id": 13
     }
   ],
   "agency": [
@@ -124,6 +129,15 @@
       "complement": "Suite 134",
       "phone": "892770422",
       "id": 7
+    },
+    {
+      "bankId": 13,
+      "adress": "Turcotte Club",
+      "number": "32004",
+      "city": "Lake Willis",
+      "complement": "Apt. 334",
+      "phone": "667695889",
+      "id": 8
     }
   ],
   "customer": [
@@ -203,6 +217,17 @@
       "phone": "191214243",
       "email": "ettie@gottlieb.info",
       "id": 7
+    },
+    {
+      "agencyId": 4,
+      "name": "Heath Gulgowski",
+      "occupation": "Human Engineer",
+      "adress": "Salena Viaduct",
+      "number": "68364",
+      "complement": "Apt. 874",
+      "phone": "964897499",
+      "email": "joyweimann@ziemann.biz",
+      "id": 8
     }
   ],
   "account": [
@@ -296,6 +321,19 @@
       "status": "active",
       "created": "28/08/2018 10:44",
       "id": 7
+    },
+    {
+      "customerId": 6,
+      "account_number": 1885972579,
+      "iban": "GB65VCPD23240948734193",
+      "card": "5423-9769-7910-6712",
+      "verification_code": "854",
+      "balance": 252.03,
+      "high_limit": 2529,
+      "low_limit": 22,
+      "status": "active",
+      "created": "29/08/2018 11:42",
+      "id": 8
     }
   ],
   "transaction": [
@@ -375,6 +413,17 @@
       "value": 48.26,
       "date": "28/08/2018 10:44",
       "id": 7
+    },
+    {
+      "accountId": 1,
+      "protocol": "B000AM3FKK",
+      "status": "confirmed",
+      "transactionId": "c1472656f1a7271b70236a4eedf37ecedf7ed13c",
+      "type": "credit",
+      "routing_number": "705098595",
+      "value": 98.21,
+      "date": "29/08/2018 11:42",
+      "id": 8
     }
   ]
 }
