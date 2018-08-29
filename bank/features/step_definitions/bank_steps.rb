@@ -9,10 +9,10 @@ end
 Então("a API irá retornar os dados do cadastro do Banco respondendo o código {int}") do |int|
     expect($response.code).to eq(int)
     expect(JSON.parse($response.body)).to include('id','code','name')
-    puts "Código :#{$response.code}"
-    puts "ID     :#{$response['id']}"
-    puts "Código :#{$response['code']}"
-    puts "Nome   :#{$response['name']}"
+    puts "Status Code :#{$response.code}"
+    puts "ID          :#{$response['id']}"
+    puts "Código      :#{$response['code']}"
+    puts "Nome        :#{$response['name']}"
 end 
 
 Então("a mensagem {string}") do |string|
@@ -26,10 +26,10 @@ end
   
 Então("a API irá retornar os dados da pesquisa do Banco respondendo o código {int}") do |int|
     expect($get.code).to eq(int)
-    puts "Código :#{$get.code}"
-    puts "ID     :#{$get['id']}"
-    puts "Código :#{$get['code']}"
-    puts "Nome   :#{$get['name']}"
+    puts "Status Code :#{$get.code}"
+    puts "ID          :#{$get['id']}"
+    puts "Código      :#{$get['code']}"
+    puts "Nome        :#{$get['name']}"
 
 end
   
@@ -45,10 +45,10 @@ end
 Então("a API irá retornar os dados da Alteração do Banco respondendo o código {int}") do |int|
     expect($put.body).to_not eq($response.body)
     expect($put.code).to eq(int)
-    puts "Código :#{$put.code}"
-    puts "ID     :#{$put['id']}"
-    puts "Código :#{$put['code']}"
-    puts "Nome   :#{$put['name']}"  
+    puts "Status Code :#{$put.code}"
+    puts "ID          :#{$put['id']}"
+    puts "Código      :#{$put['code']}"
+    puts "Nome        :#{$put['name']}"  
 end
   
 Então("a mensagem da alteração {string}") do |string|

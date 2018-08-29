@@ -64,6 +64,11 @@
       "name": "ABC INTERNATIONAL BANK PLC",
       "code": 694,
       "id": 13
+    },
+    {
+      "name": "ALLIED BANK PHILIPPINES (UK) PLC",
+      "code": "16",
+      "id": 14
     }
   ],
   "agency": [
