@@ -1,5 +1,8 @@
 # Automação de Testes em API com HTTParty e Cucumber
-![Imagem capa](https://cdn-images-1.medium.com/max/1351/1*vKN5omQFsclccLZBKcKU8g.png)
+![Imagem capa](https://secure.meetupstatic.com/photos/event/6/b/3/a/highres_473727450.jpeg)
+
+## Sobre o Projeto
+Este projeto esta relacionado ao evento MOBI Talks da conta.MOBI onde foi demonstrado o uso do HTTParty para realizar testes automatizados dentro do processo do BDD utilizando o Cucumber.
 
 ## json-server
 comando para instalação do json-server
@@ -38,6 +41,3 @@ c:\ npm install json-server
 ```shell
 $ cucumber
 ```
-## Apresentação
-* Link: 
-* Medium: https://medium.com/@rafaelberam/automa%C3%A7%C3%A3o-de-testes-api-com-httparty-e-cucumber-bdd-d955749affa8
