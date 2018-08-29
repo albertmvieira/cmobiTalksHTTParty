@@ -35,6 +35,16 @@ c:\ npm install json-server
 * Possuir ruby instalado **> 2.0.0**
 * https://www.ruby-lang.org/pt/downloads/
 
+#### Instalando dependências do Ruby
+* instalar a gem bundler 
+```shell
+$ gem install bundler
+```
+* Após instalação, na raiz do projeto, rodar o comando:
+ 
+```shell
+$ bundle install
+```
 #### Executando o cucumber
 1. Acesse a parta **[ API ]**
 1. Execute o comando:
